@@ -129,7 +129,8 @@ public class regmaven {
 	 
 	   // WebElement cityname=driver.findElement(By.id("city"));
 	    cityname.sendKeys("Pune");
-	    System.out.println("welcome to pune maharashtra");
+	    
+	    System.out.println("welcome welcome to pune maharashtra india");
 	    
 
 	   // WebElement selectstate=driver.findElement(By.id("id_state"));
