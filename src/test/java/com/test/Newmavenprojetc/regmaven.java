@@ -10,6 +10,8 @@ import org.yaml.snakeyaml.events.Event.ID;
 
 public class regmaven {
 	
+	
+	
 	@FindBy(name="id_gender")
 	WebElement selecttitle;
 	
@@ -127,6 +129,7 @@ public class regmaven {
 	 
 	   // WebElement cityname=driver.findElement(By.id("city"));
 	    cityname.sendKeys("Pune");
+	    System.out.println("welcome to pune maharashtra");
 	    
 
 	   // WebElement selectstate=driver.findElement(By.id("id_state"));
