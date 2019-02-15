@@ -31,7 +31,7 @@ WebDriver driver;
 		signin.click();
 
 		//WebElement emailtext=driver.findElement(By.id("email_create"));
-		emailtext.sendKeys("opi1@gmail.com");
+		emailtext.sendKeys("opi12@gmail.com");
 		
 		//WebElement clickcreate=driver.findElement(By.id("SubmitCreate"));
 		clickcreate.click();
