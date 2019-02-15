@@ -1,6 +1,11 @@
 package com.test.Newmavenprojetc;
 
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -13,7 +18,8 @@ import org.testng.annotations.AfterTest;
 
 public class NewTest {
 	WebDriver driver;
-	
+	ExtentTest test;
+	ExtentReports extent;
 
 	
   @Test
@@ -31,10 +37,18 @@ public class NewTest {
 	  paymentmaven ref4= new paymentmaven(driver);
 	  ref4.paymentprocess();
   }
-  @Parameters("brow")
+  @Parameters("browser")
   
   @BeforeTest
-  public void beforeTest(String xyzabc) {
+  public void beforeTest(String xyzabc) 
+  {
+     ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("ExtentReport.html");
+	  
+	  ExtentReports extent=new ExtentReports();
+	  extent.attachReporter(htmlReporter);
+	  test=extent.createTest("first test");
+	  test.pass("started my test");
+		  
 	 
 	  String browser=xyzabc;
 			  
@@ -64,7 +78,8 @@ public class NewTest {
 
   @AfterTest
   public void afterTest() {
-	  driver.quit();
+	 driver.quit();
+	 extent.flush();
   }
 
 }

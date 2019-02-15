@@ -2,20 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
   <test thread-count="5" name="Test" parallel="tests">
-  <parameter name="brow" value="firefox"></parameter>
+  <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="com.test.Newmavenprojetc.NewTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Test2" parallel="tests">
- <parameter name="brow" value="ie"></parameter>
+ <parameter name="browser" value="ie"></parameter>
     <classes>
       <class name="com.test.Newmavenprojetc.NewTest"/>
     </classes>
   </test> <!-- Test -->
   <test thread-count="5" name="Test3" parallel="tests">
- <parameter name="brow" value="firefox"></parameter>
+ <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="com.test.Newmavenprojetc.NewTest"/>
     </classes>
